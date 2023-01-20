@@ -1,0 +1,92 @@
+{
+  "faculty": [
+    {
+      "id": "123",
+      "name": "Ramesh",
+      "password": "ram",
+      "studentId": "1292",
+      "CourseId": [
+        45
+      ]
+    },
+    {
+      "id": "456",
+      "name": "Rajesh",
+      "password": "raj",
+      "studentId": "12",
+      "CourseId": [
+        11
+      ]
+    },
+    {
+      "id": "789",
+      "name": "naga1",
+      "password": "1234",
+      "studentId": "1292",
+      "CourseId": [
+        21,
+        78,
+        45
+      ]
+    }
+  ],
+  "student": [
+    {
+      "id": "1292",
+      "name": "rithika",
+      "password": "1"
+    },
+    {
+      "id": "1286",
+      "name": "sravya",
+      "password": "1"
+    },
+    {
+      "id": "1294",
+      "name": "Akshara",
+      "password": "1"
+    },
+    {
+      "id": "1296",
+      "name": "Ravi",
+      "password": "1"
+    },
+    {
+      "id": "1298",
+      "name": "Sameer",
+      "password": "1"
+    }
+  ],
+  "Courses": [
+    {
+      "id": "45",
+      "name": "Java",
+      "studentId": "1292",
+      "facultyId": "123",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbk6-cfNgAGDMOQpWDx_m0yWbDC0xXqY201Q&usqp=CAU"
+    },
+    {
+      "id": "78",
+      "name": "Computer Networks",
+      "studentId": "1292",
+      "facultyId": "456",
+      "image": "https://studyopedia.com/wp-content/uploads/2017/04/computer-networking.png"
+    },
+    {
+      "id": "21",
+      "name": "Computer Architecture",
+      "studentId": "1292",
+      "facultyId": "789",
+      "image": "https://cdn.educba.com/academy/wp-content/uploads/2018/12/Computer-Architecture.jpg"
+    },
+    {
+      "id": "11",
+      "name": "MAD",
+      "studentId": "1286",
+      "facultyId": "789",
+      "image": "https://cdn.educba.com/academy/wp-content/uploads/2018/12/Computer-Architecture.jpg"
+    }
+  ]
+  
+  
+}

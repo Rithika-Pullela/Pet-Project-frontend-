@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Spage{
+    height:fit-content;
+    background-color: rgb(168, 171, 171);  
+    /* text-align: center; */
+}
+.simage{ 
+     height:700px;
+     background: url(../pics/spic.png)no-repeat center center;
+}
+.Spage h1{
+ width:40%;
+ margin: 0 auto;
+ margin-bottom: 2%;
+ margin-top: 2%;
+ text-align: center;
+}
+.courses{
+    width:80%;
+    height: 50%;
+    margin: 0 auto;
+    /* background-color: rgb(135, 214, 90); */
+}
+
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+.nav div button{
+    margin: 10px;
+    padding: 3px;
+    border-radius: 0.5em;
+    cursor: pointer;
+   
+}
+.nav div button:hover{
+    background-color: rgb(84, 156, 224);
+    color: white;
+}
+
+
+.Sprofile{
+    position:fixed;
+    background-color: rgb(197, 194, 194);
+    border-radius: 0.5em;
+    width:30%;
+    margin-left: 63%;
+    margin-top:40px;
+    height:40%
+    
+}
+
+.spcontent{
+    width:90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: rgb(103, 184, 200);
+    height:80%
+}
+
+.profileform{
+    margin-left: 25%;
+    margin-top: 2%;
+}
+
+.details{
+    display: flex;
+}
+
+.logoutpage{
+    position:fixed;
+    height:100px;
+    width:190px;
+    background-color: rgb(17, 126, 177);
+    margin-left: 87%;
+    margin-top: 3%;
+    border-radius: 0.5em;
+}
+
+.scontent{
+    width:70%;
+    margin: 0 auto;
+    margin-top: 10%;
+    background-color: rgb(254, 255, 255);
+    height:60%
+}
+
+.courses{
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.comp{
+
+    border:2px solid rgb(212, 206, 206);
+    border-radius: 1em;
+    color:rgb(190, 72, 13);
+  }
+  .comp:hover{
+   box-shadow: 5px 5px rgb(142, 124, 124);
+  }
+
+  .comp img{
+    height:200px;
+    width:300px;
+    border-radius: 1em;
+  }
+
+  .comp h4{
+    width:40%;
+    margin: 0 auto;
+  }
+
+ 
+
+.enrolled {
+    display: flex;
+    justify-content:space-evenly;
+    /* margin-right: 5%; */
+    
+    height: fit-content;  
+}
+
+
+  .subjectpage h1{
+    width:5%;
+    margin: 0 auto;
+    font-size: 50px;
+  }
+
+  .subjectpage div a{
+    text-decoration: none;
+    color: purple;
+    font-size: 28px;
+    /* padding: 20px; */
+    border: 1px solid black;
+    display: block;
+    margin: 10px;
+    background-color: rgb(214, 212, 210);
+  }
+  .subjectpage  div  :hover{
+    background-color: rgb(190, 177, 177);
+  
+  }
+  .subjectpage  div{
+    width:20%;
+    margin: 0 auto;
+    text-decoration: none;
+  }
+  .subjectpage div:first-of-type{
+    margin-top: 40px;
+ 
+  }
+
+
+/* styling remainders */
+
+.remainder{
+  height:fit-content;
+  width:30%;
+  background-color: rgb(226, 178, 107);
+  border: 2px solid black;
+  margin-top: 40px;
+  margin-left: 40px;
+  position:fixed;
+}
+
+.remainderbox{
+  margin:9px;
+  border:1px solid black;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remainderbox p{
+  margin-top: 9px;
+}
+/* .remainderbox button{
+
+} */
+
+
+/* Styling for enrolled course page */
+
+.enrolledcoursepage {
+  height: 100vh;
+  background-color: rgb(219, 216, 216);
+  align-items: center;
+}
+
+.enrolledcoursepage h1{
+  text-align: center;
+}
+
+.enrolledcoursepage img{
+  height:500px;
+  width:700px;
+  margin-left:25%;
+  margin-top: 1%;
+
+}
+
