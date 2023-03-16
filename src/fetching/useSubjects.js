@@ -6,5 +6,5 @@ import axios from 'axios'
 }
 
 export const useSubjects= (id) => {
-    return useQuery([id], ()=>Qfun(id));
+    return useQuery(['subjetcs',id], ()=>Qfun(id));
 }

@@ -2,91 +2,173 @@
   "faculty": [
     {
       "id": "123",
-      "name": "Ramesh",
-      "password": "ram",
+      "password": "1",
       "studentId": "1292",
-      "CourseId": [
-        45
-      ]
+      "CourseId": 78
     },
     {
       "id": "456",
-      "name": "Rajesh",
       "password": "raj",
       "studentId": "12",
-      "CourseId": [
-        11
-      ]
+      "CourseId": 21
     },
     {
       "id": "789",
-      "name": "naga1",
-      "password": "1234",
+      "password": "9",
       "studentId": "1292",
-      "CourseId": [
-        21,
-        78,
-        45
-      ]
+      "CourseId": 45
     }
   ],
   "student": [
     {
       "id": "1292",
-      "name": "rithika",
-      "password": "1"
+      "password": "123"
     },
     {
       "id": "1286",
-      "name": "sravya",
       "password": "1"
     },
     {
       "id": "1294",
-      "name": "Akshara",
       "password": "1"
     },
     {
       "id": "1296",
-      "name": "Ravi",
       "password": "1"
     },
     {
       "id": "1298",
-      "name": "Sameer",
       "password": "1"
     }
   ],
   "Courses": [
     {
-      "id": "45",
+      "id": 45,
       "name": "Java",
       "studentId": "1292",
-      "facultyId": "123",
+      "facultyId": "789",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbk6-cfNgAGDMOQpWDx_m0yWbDC0xXqY201Q&usqp=CAU"
     },
     {
-      "id": "78",
+      "id": 78,
       "name": "Computer Networks",
       "studentId": "1292",
       "facultyId": "456",
       "image": "https://studyopedia.com/wp-content/uploads/2017/04/computer-networking.png"
     },
     {
-      "id": "21",
+      "id": 21,
       "name": "Computer Architecture",
       "studentId": "1292",
-      "facultyId": "789",
+      "facultyId": "123",
       "image": "https://cdn.educba.com/academy/wp-content/uploads/2018/12/Computer-Architecture.jpg"
     },
     {
-      "id": "11",
-      "name": "MAD",
-      "studentId": "1286",
-      "facultyId": "789",
+      "id": 11,
+      "name": "Mobile App Development",
+      "studentId": "1292",
+      "facultyId": "123",
       "image": "https://cdn.educba.com/academy/wp-content/uploads/2018/12/Computer-Architecture.jpg"
     }
+  ],
+  "assignments": [
+    {
+      "id": 1,
+      "name": "Complete Assignment 1",
+      "deadline": "2/2/2023",
+      "progress": "Work in progress",
+      "CourseId": 45
+    },
+    {
+      "id": 11,
+      "name": "Assignment-3",
+      "deadline": "2/2/2023",
+      "progress": "Submit To Verify",
+      "CourseId": 45
+    },
+    {
+      "CourseId": 45,
+      "deadline": "2/2/2023",
+      "name": "Assignment-2",
+      "progress": "Work in progress",
+      "id": 12
+    },
+    {
+      "id": 14,
+      "name": "Assignment-4",
+      "deadline": "2/2/2023",
+      "progress": "Work in progress",
+      "CourseId": 21
+    },
+    {
+      "id": 15,
+      "name": "Assignment-11",
+      "deadline": "10/2/2023",
+      "progress": "Work in progress",
+      "CourseId": 21
+    },
+    {
+      "deadline": "1/2/2023",
+      "name": "My Assignmenttttt",
+      "CourseId": 45,
+      "progress": "Untouched",
+      "id": 16
+    },
+    {
+      "deadline": "1/2/2023",
+      "name": "MAD Basics",
+      "CourseId": 11,
+      "progress": "Untouched",
+      "id": 17
+    },
+    {
+      "deadline": "27/2/2023",
+      "name": "Assignment-1",
+      "progress": "Untouched",
+      "CourseId": 11,
+      "id": 19
+    },
+    {
+      "deadline": "4/1/2023",
+      "name": "check",
+      "CourseId": 45,
+      "progress": "Untouched",
+      "id": 20
+    },
+    {
+      "deadline": "12/1/2023",
+      "name": "Assignment-1",
+      "CourseId": 45,
+      "progress": "Untouched",
+      "id": 21
+    },
+    {
+      "deadline": "10/3/2023",
+      "name": "Assignment-1",
+      "CourseId": 45,
+      "progress": "Untouched",
+      "id": 22
+    },
+    {
+      "deadline": "22/2/2023",
+      "name": "checkkkkkkkkkkk",
+      "CourseId": 45,
+      "progress": "Untouched",
+      "id": 23
+    },
+    {
+      "deadline": "15/3/2023",
+      "name": "edes",
+      "CourseId": 45,
+      "progress": "Untouched",
+      "id": 24
+    },
+    {
+      "deadline": "14/3/2023",
+      "name": "edes",
+      "CourseId": 45,
+      "progress": "Untouched",
+      "id": 25
+    }
   ]
-  
-  
 }

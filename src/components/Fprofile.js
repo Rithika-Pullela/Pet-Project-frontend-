@@ -1,115 +1,137 @@
-import FacIdval from './FacIdval';
-import { useRecoilState } from 'recoil';
 import './Facultyhome.css'
-import Fprofiledisplay from './Fprofiledisplay';
-import { UserOutlined } from '@ant-design/icons';
-import { useFormik } from 'formik';
 import { useQuery } from 'react-query'
+import Fprofiledisplay from '../store/Fprofiledisplay';
+import { useRecoilState } from 'recoil';
 import axios from 'axios'
 import { useMutation } from 'react-query'
-import { EditFaculty } from './useMutationf';
+import { EditFaculty } from '../fetching/useMutationf';
+import { Button, Form, Input } from 'antd';
+import { LoadingOutlined, UserOutlined } from '@ant-design/icons';
+import { Spin } from 'antd';
+import { Space } from 'antd';
+const antIcon = (
+  <LoadingOutlined
+    style={{
+      fontSize: 24,
+    }}
+    spin
+  />
+);
+
+
+const layout = {
+  labelCol: {
+    span: 8,
+  },
+  wrapperCol: {
+    span: 16,
+  },
+};
+
+const tailLayout = {
+  wrapperCol: {
+    offset: 8,
+    span: 16,
+  },
+};
+
 
 const useQfun2 = async ({ queryKey }) => {
-    // console.log(queryKey)
-    const { data } = await axios.get(`http://localhost:3001/faculty/${queryKey[0]}`);
-    // console.log(data);
-    return data
+  return await axios.get(`http://localhost:3001/faculty/${queryKey[1]}`);
 }
 
 export default function Fprofile() {
-    const y = localStorage.getItem('lfid');
-    const { data, isLoading } = useQuery([y], useQfun2);
-    const { mutate } = useMutation((values) => EditFaculty(values))
-    
-    const formik = useFormik({
-        initialValues: {
-            username: '',
-            newpassword: '',
-            cpassword: '',
-        },
-        onSubmit: (values) => {
-            console.log("profile form submission:", values.username);
-            console.log("profile form submission:", values.newpassword);
-            console.log("profile form submission:", values.cpassword);
-            if (values.newpassword == values.cpassword) {
-                { console.log("update successful") }
 
-                const newobj = {
-                    "id": data.id,
-                    "name": values.username,
-                    "password": values.newpassword,
+  const currentFacultyId = localStorage.getItem('lfid');
+  const { data, isLoading } = useQuery(['faculty', currentFacultyId], useQfun2);
+  const [profile, setprofile] = useRecoilState(Fprofiledisplay);
+  const { mutate } = useMutation((values) => EditFaculty(values))
+  const [form] = Form.useForm();
+  const onFinish = (values) => {
+   const newobj = {
+      "id": data.data.id,
+      "password": values.newpassword,
+      "studentId": data.data.studentId,
+      "CourseId": data.data.CourseId
 
-                }
-                console.log("newvalues", newobj)
-                mutate(newobj)
-            }
-        },
-    });
-    const [id, setid] = useRecoilState(FacIdval);
-    console.log("the id:", localStorage.getItem('lfid'));
-
-
-    const [value, setvalue] = useRecoilState(Fprofiledisplay);
-
-
-    if (isLoading) {
-        return <h1>Current faculty details loading,waittttt!</h1>
     }
+    mutate(newobj);
+    alert("New Password is set!")
+    onReset();
+  };
 
-    else {
-        console.log("current fac data", data)
-    }
-
-
-
-    return (
-        <>
-            <div className="Sprofile">
-                <div className='spcontent'>
-                    <div className='details'>
-                        <UserOutlined style={{ fontSize: '40px', color: '#08c', margin: "10px" }} />
-
-                    </div>
+  const onReset = () => {
+    form.resetFields();
+  };
 
 
-                    <div className='profileform'>
-                        <form onSubmit={formik.handleSubmit}>
+  if (isLoading) {
+    return <h1>
+      <Spin indicator={antIcon} />Current faculty details loading,waittttt!</h1>
+  }
 
-                            <label htmlFor="username">
-                                New username :</label><br></br>
-                            <input
-                                id="username"
-                                name="username"
-                                type="text"
-                                onChange={formik.handleChange}
-                                value={formik.values.username}
-                            />
-                            <br></br>
 
-                            <label htmlFor="newpassword"> New password:</label><br></br>
-                            <input
-                                id="newpassword"
-                                name="newpassword"
-                                type="password"
-                                onChange={formik.handleChange}
-                                value={formik.values.newpassword}
-                            /><br></br>
+  const handleProfile = () => {
+    setprofile(!profile)
+  }
 
-                            <label htmlFor="cpassword">  Confirm New password:</label><br></br>
-                            <input
-                                id="cpassword"
-                                name="cpassword"
-                                type="password"
-                                onChange={formik.handleChange}
-                                value={formik.values.cpassword}
-                            /><br></br>
-                            <button type="submit">Submit</button>
+  return (
+    <>
+      <div className="Fprofile">
 
-                        </form>
-                    </div>
+        <div className='userdetails'>
 
-                </div>
-            </div>
-        </>
-    );
+          <UserOutlined style={{ fontSize: '100px', color: ' #1677ff', border: '9px  solid #1677ff', borderRadius: '0.39em', marginTop: '30px' }} />
+          <p><strong>ID : </strong>{data.data.id}</p>
+
+        </div>
+
+        <Space
+          direction="vertical"
+          style={{
+            width: '40%',
+            marginTop: '5%',
+
+          }}
+        >
+          <Button type="primary" block onClick={handleProfile}>Edit Details</Button>
+
+        </Space>
+        {profile &&
+
+          <Form {...layout} form={form} name="control-hooks" onFinish={onFinish} className='profileform'>
+
+            <Form.Item name="newpassword" label="New Password" rules={[
+              {
+                required: true,
+              },
+            ]} >
+              <Input.Password />
+            </Form.Item>
+
+            <Form.Item name="cpassword" label=" Confirm New Password" rules={[
+              {
+                required: true,
+              },
+            ]} >
+              <Input.Password />
+            </Form.Item>
+
+
+            <Form.Item {...tailLayout}>
+
+              <Button type="primary" htmlType="submit">
+                Submit
+              </Button>
+              <Button htmlType="button" className='resetbtn' onClick={onReset}>
+                Reset
+              </Button>
+
+            </Form.Item>
+          </Form>
+        }
+      </div>
+
+    </>
+  );
 }

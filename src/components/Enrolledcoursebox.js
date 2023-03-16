@@ -2,16 +2,15 @@ import './Studenthome.css'
 import { Link } from 'react-router-dom'
 
 export default function Enrolledcoursebox(props) {
+    return(
 
-    return (
-       
-            <Link to={`/Courses/${props.obj.id}`} style={{ textDecoration: 'none'}}>
-                 <div className='comp' >
-                      <img src={props.obj.image} alt="no img to display"></img>
-                     <h4><strong>{props.obj.name}</strong></h4>
-                </div>
-            </Link>
-      
+        <Link to={`/Courses/${props.enrolledcourseinfo.id}`} style={{ textDecoration: 'none' }}>
+            <div className='comp' >
+                <img src={props.enrolledcourseinfo.image} alt="no img to display"></img>
+                <h4><strong>{props.enrolledcourseinfo.name}</strong></h4>
+            </div>
+        </Link>
+
     )
 
 }

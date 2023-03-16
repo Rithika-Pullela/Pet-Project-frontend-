@@ -1,95 +1,44 @@
 import './Login.css'
-import React,{ useState } from 'react'
+import React, { useState } from 'react'
 import LoginForm from './LoginForm';
+import { Button, Space } from 'antd';
 
+export default function Login() {
+    const [togglerForStudentFacutlyLogin, settogglerForStudentFacutlyLogin] = useState(false);
 
-
-export default function Login()
-{
-    const[val1 ,setval1]=useState(true);
-    function toggler1(){
-        setval1(false)
+    function studentclick() {
+        settogglerForStudentFacutlyLogin(false)
     }
-    function toggler2(){
-        setval1(true)
+    function facultyclick() {
+        settogglerForStudentFacutlyLogin(true)
     }
 
-  
-
-    return(
+    return (
         <>
-        <body>
-            <div className='loginPage'>  
-                        <h1>Login</h1>
-                        <div>
-                            <button className='btn' onClick={toggler1}>Student</button>
-                            <br></br>
-                            <button className='btn' onClick={toggler2}>Faculty</button>
+            <div>
+                <div className='loginpage'>
+                    <div className='loginpart1'></div>
+                    <div className='loginpart2'>
+                        <div className='xyz'>
+                            <h1>Login</h1>
+                            <Space
+                                direction="vertical"
+                                style={{
+                                    width: '36%',
+                                    margin: '3%',
+                                }}
+                            >
+                                <Button type="primary" block onClick={studentclick} style={{ background: "white", color: "black", fontSize: "bold" }}>Student</Button>
+                                <Button type="primary" block onClick={facultyclick} style={{ background: "white", color: "black", fontSize: "bold" }}>Faculty</Button>
+                            </Space>
                         </div>
-                        <br></br>
-                        {val1  && <LoginForm  user={"faculty"}/>}
-                        {!val1 && <LoginForm  user={"student"}/>}
-            </div>    
-        </body>  
+                        <div className='center'>
+                            {togglerForStudentFacutlyLogin && <LoginForm user={"Faculty"} />}
+                            {!togglerForStudentFacutlyLogin && <LoginForm user={"Student"} />}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
-
-
-
-
-
-// {
-//   "Students": [
-//     {
-//       "id": 1,
-//       "name": "Rithika",
-//       "phn-no": 8522949986,
-//       "email": "rithikapullela@gmail.com"
-      
-//     },
-//     {
-//       "id": 2,
-//       "name": "Akshara",
-//       "phn-no": 9553146015,
-//       "email": "akshara@gmail.com"
-//     }
-//   ],
-
-//   "Courses": [
-//     {
-//       "cid": 1,
-//       "cname": "React",
-//       "Faculty": "Naga",
-//       "email": "naga@gmail.com",
-//       "studentid":1
-//     },
-//     {
-//       "cid": 2,
-//       "cname": "Git",
-//       "Faculty": "Sai",
-//       "email": "sai@gmail.com",
-//       "studentid":1
-//     },
-//     {
-
-//       "cid": 3,
-//       "cname": "html",
-//       "Faculty": "Gp",
-//       "email": "gp@gmail.com",
-//       "studentid":2
-//     }
-    
-//   ]
-
-
-// }
-
-
-  
-  
-  
-  
-  
-  
-  

@@ -1,71 +1,52 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background: url(../pics/bvrit.jpg) no-repeat center center fixed;
-    background-size: cover;
+.xyz button:first-of-type{
+margin-bottom: 10px;
+margin-top: 5px;
 }
 
-.loginPage {
-background-color:rgb(163, 109, 169);
-width:35%;
-margin: 0 auto;
-margin-top: 5%;
-margin-left: 40%;
-height: 540px;
-border-radius: 0.5em;
-box-shadow: 9px 9px  rgb(131, 51, 159);
+.loginpage {
+    display: flex;
+    border-radius: 0.75em;
+    min-height: 100vh;
+    background-color: rgba(128, 185, 223, 0.954);
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
-.loginPage h1{
-    margin-left: 43%;
-}
-
-.loginPage div{
-    margin-top: 40px;
-}
-.btn{
-    width:40%;
-    margin-left: 30%;
-    margin-top: 20px;
-    height: 40px;
-    border-radius: 0.5em;
+.center {
+    height: 270px;
+    border: 1px solid black;
+    margin-top: 6%;
+    padding-top: 9%;
+    font-size: 18px;
+    background-color: rgb(141, 195, 221);
+    color: white;
     font-weight: bold;
-    font-size: 20px;
-    cursor: pointer;
 }
 
-.btn:hover{
-    color:white;
-    background-color:   rgb(131, 51, 159);
-}
-.inputs{
-    width:70%;
-    margin: 0 auto;
-    margin-left: 30%;
+.loginpart1{
+    width:55%;
+    min-height: 100vh;
+    background: url(../pics/bvrit.jpg) no-repeat center center ;
+    background-size: cover; 
 }
 
-.inputs  input{
-    border-radius: 0.5em;
-    height:30px;
-    padding: 10px;
-    margin: 4px;
+.loginpart2{
+    width:50%;
     
 }
 
-.inputs button{
-    margin-top:10px ;
-    margin-left: 15%;
-    width:80px;
-    height:30px;
-    border-radius: 0.5em;
-    font-weight: bold;
+.xyz{
+    margin-top: 18%;
+    text-align: center;
 }
 
-.inputs button:hover{
-    color:white;
-    background-color:   rgb(131, 51, 159);
+.username{
+    margin-top: 8%;
 }
+

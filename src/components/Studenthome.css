@@ -1,191 +1,238 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.Spage{
-    height:fit-content;
-    background-color: rgb(168, 171, 171);  
-    /* text-align: center; */
-}
-.simage{ 
-     height:700px;
-     background: url(../pics/spic.png)no-repeat center center;
-}
-.Spage h1{
- width:40%;
- margin: 0 auto;
- margin-bottom: 2%;
- margin-top: 2%;
- text-align: center;
-}
-.courses{
-    width:80%;
-    height: 50%;
-    margin: 0 auto;
-    /* background-color: rgb(135, 214, 90); */
+.Spage {
+  height: fit-content;
 }
 
+/* .simage {
+  height: 700px;
+  background: url(../pics/spic.png)no-repeat center center;
+} */
 
-.nav{
-    display: flex;
-    justify-content: space-between;
-}
-.nav div button{
-    margin: 10px;
-    padding: 3px;
-    border-radius: 0.5em;
-    cursor: pointer;
-   
-}
-.nav div button:hover{
-    background-color: rgb(84, 156, 224);
-    color: white;
-}
-
-
-.Sprofile{
-    position:fixed;
-    background-color: rgb(197, 194, 194);
-    border-radius: 0.5em;
-    width:30%;
-    margin-left: 63%;
-    margin-top:40px;
-    height:40%
-    
-}
-
-.spcontent{
-    width:90%;
-    margin: 0 auto;
-    margin-top: 30px;
-    background-color: rgb(103, 184, 200);
-    height:80%
-}
-
-.profileform{
-    margin-left: 25%;
-    margin-top: 2%;
-}
-
-.details{
-    display: flex;
-}
-
-.logoutpage{
-    position:fixed;
-    height:100px;
-    width:190px;
-    background-color: rgb(17, 126, 177);
-    margin-left: 87%;
-    margin-top: 3%;
-    border-radius: 0.5em;
-}
-
-.scontent{
-    width:70%;
-    margin: 0 auto;
-    margin-top: 10%;
-    background-color: rgb(254, 255, 255);
-    height:60%
-}
-
-.courses{
-    display: flex;
-    justify-content: space-between;
-    height: fit-content;
-}
-
-.comp{
-
-    border:2px solid rgb(212, 206, 206);
-    border-radius: 1em;
-    color:rgb(190, 72, 13);
-  }
-  .comp:hover{
-   box-shadow: 5px 5px rgb(142, 124, 124);
-  }
-
-  .comp img{
-    height:200px;
-    width:300px;
-    border-radius: 1em;
-  }
-
-  .comp h4{
-    width:40%;
-    margin: 0 auto;
-  }
-
- 
-
-.enrolled {
-    display: flex;
-    justify-content:space-evenly;
-    /* margin-right: 5%; */
-    
-    height: fit-content;  
-}
-
-
-  .subjectpage h1{
-    width:5%;
-    margin: 0 auto;
-    font-size: 50px;
-  }
-
-  .subjectpage div a{
-    text-decoration: none;
-    color: purple;
-    font-size: 28px;
-    /* padding: 20px; */
-    border: 1px solid black;
-    display: block;
-    margin: 10px;
-    background-color: rgb(214, 212, 210);
-  }
-  .subjectpage  div  :hover{
-    background-color: rgb(190, 177, 177);
-  
-  }
-  .subjectpage  div{
-    width:20%;
-    margin: 0 auto;
-    text-decoration: none;
-  }
-  .subjectpage div:first-of-type{
-    margin-top: 40px;
- 
-  }
-
-
-/* styling remainders */
-
-.remainder{
-  height:fit-content;
-  width:30%;
-  background-color: rgb(226, 178, 107);
-  border: 2px solid black;
-  margin-top: 40px;
-  margin-left: 40px;
-  position:fixed;
-}
-
-.remainderbox{
-  margin:9px;
-  border:1px solid black;
+.Spage h1 {
+  width: 40%;
+  margin: 0 auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
   text-align: center;
+}
+
+.parent{
   display: flex;
   justify-content: space-between;
 }
 
-.remainderbox p{
-  margin-top: 9px;
+.logoutbtn{
+  border-radius: 0.5em;
+  background-color: none;
+  padding: 4px;
 }
-/* .remainderbox button{
 
-} */
+
+.courses {
+  width: 80%;
+  height: 50%;
+  margin: 0 auto;
+}
+
+
+.snav {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.snav div button {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-weight: bold;
+  height: 33px;
+
+}
+
+.snav div button a {
+  text-decoration: none;
+  color: black
+}
+
+.snav div button:hover {
+  background-color: rgb(84, 156, 224);
+  color: white;
+}
+
+
+.sprofile {
+  min-height: 100vh;
+  background-color: white;
+  width:80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.userdetails p{
+  font-size: 33px;
+  margin-right: 7%;
+}
+
+.userdetails p:first-of-type{
+  margin-top: 2%;
+}
+.userdetails p:last-of-type{
+  margin-top: 2%;
+  margin-left: 8%;
+}
+.profileform {
+    margin-top: 7%;
+    margin-right: 12%;
+}
+
+.resetbtn{
+  margin-right: 19%;
+}
+
+.details {
+  display: flex;
+}
+
+.logoutpage {
+  height: 100px;
+  width: 190px;
+  background-color: rgb(205, 206, 207);
+  border-radius: 0.5em;
+  color: balck
+}
+
+.scontent {
+  width: 86%;
+  margin: 0 auto;
+  margin-top:9%;
+  background-color: rgb(205, 206, 207);
+  height: 64%
+}
+
+.scontent button:hover {
+  color: black;
+}
+
+.courses {
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.comp {
+
+  border: 2px solid rgb(212, 206, 206);
+  border-radius: 1em;
+  color: rgb(190, 72, 13);
+  
+}
+
+.comp img {
+  height: 200px;
+  width: 300px;
+  border-radius: 1em;
+}
+
+.comp h4 {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.enrolled {
+  display: flex;
+  justify-content: space-evenly;
+  height: fit-content;
+}
+
+
+.subjectpage h1 {
+  width: 5%;
+  margin: 0 auto;
+  font-size: 50px;
+}
+
+.subjectpage div a {
+  text-decoration: none;
+  color: purple;
+  font-size: 28px;
+  /* padding: 20px; */
+  border: 1px solid black;
+  display: block;
+  margin: 10px;
+  background-color: rgb(214, 212, 210);
+}
+
+.subjectpage div :hover {
+  background-color: rgb(190, 177, 177);
+
+}
+
+.subjectpage div {
+  width: 20%;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.subjectpage div:first-of-type {
+  margin-top: 40px;
+
+}
+
+
+/* styling remainders */
+.home {
+  height: 30px;
+  width: 100px;
+  margin: 4px;
+  font-weight: bold;
+  border-radius: 0.5em;
+}
+
+.home:hover {
+  color: white;
+  background-color: grey;
+
+}
+
+.remainder {
+  background-color: rgb(243, 239, 235);
+}
+
+.remainderbox {
+  margin: 9px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  color: black;
+  border-radius: 0.5em;
+}
+
+.remainderbox p:first-of-type {
+  margin-top: 30px;
+}
+
+.remainderbox button {
+  font-weight: bold;
+  border-radius: 0.5em;
+}
+
+.remainderbox button:first-of-type {
+  margin-top: 30px;
+}
+
+.remainderbox button:hover {
+  font-weight: bold;
+  background-color: rgb(24, 24, 24);
+  color: white;
+}
 
 
 /* Styling for enrolled course page */
@@ -196,15 +243,101 @@
   align-items: center;
 }
 
-.enrolledcoursepage h1{
+.enrolledcoursepage h1 {
   text-align: center;
 }
 
-.enrolledcoursepage img{
-  height:500px;
-  width:700px;
-  margin-left:25%;
+.enrolledcoursepage img {
+  height: 500px;
+  width: 700px;
+  margin-left: 25%;
   margin-top: 1%;
-
+  border-radius: 0.5em;
+  box-shadow: 3px 3px grey;
 }
 
+.assignmentsection{
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.site-card-border-less-wrapper{
+  margin: 10px;
+}
+
+.deadantd{
+  font-size: 18px;
+  color: red;
+  margin-top: 5px;
+}
+/* Styling StudentsAssignmentPage */
+
+.StudentsAssignmentPage {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(226, 225, 225);
+  border: 2px solid black;
+}
+
+.StudentsAssignmentPage button {
+  font-weight: bold;
+  height: 30px;
+  width: 100px;
+  border-radius: 0.5em;
+}
+
+.StudentsAssignmentPage button:hover {
+  background-color: rgb(147, 141, 141);
+  color: white;
+}
+
+.updatestatusbox {
+  width: 70%;
+  margin: 0 auto;
+  border: 2px solid black;
+  margin-bottom: 30px;
+}
+
+.updatestatusbox div {
+  text-align: center;
+}
+
+.updatestatusbox div button {
+  text-align: center;
+  height: 30px;
+  width: 100px;
+  margin: 9px;
+}
+
+.deadline {
+  font-size: 20px;
+  color: red;
+  margin-left: 80%;
+}
+
+
+.radio {
+  font-size: 20px;
+  /* border: 1px solid black; */
+  text-align: center;
+}
+
+
+.site-layout-content {
+  min-height: 280px;
+  padding: 24px;
+}
+#components-layout-demo-top .logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+.ant-row-rtl #components-layout-demo-top .logo {
+  float: right;
+  margin: 16px 0 16px 24px;
+}
